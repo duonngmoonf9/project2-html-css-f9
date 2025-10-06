@@ -129,6 +129,7 @@ a {
     object-fit: cover;
     object-position: 80%;
     border-radius: 20px;
+    vertical-align: bottom;
 }
 
 .hero .media-block .hero-summary {
@@ -137,13 +138,14 @@ a {
     width: 270px;
     right: 0;
     bottom: 48px;
-    padding: 28px 24px;
+    padding: 24px;
     border-radius: 12px;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 .hero-summary .item {
     display: flex;
+    align-items: center;
     margin-top: 22px;
 }
 
