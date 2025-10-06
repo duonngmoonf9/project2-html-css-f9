@@ -59,6 +59,23 @@ a {
     z-index: 1;
 }
 
+.heading {
+    color: #171100;
+    font-family: var(--font-sen);
+    letter-spacing: -0.02em;
+}
+
+.heading.lv1 {
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 1.17;
+}
+.heading.lv2 {
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
 .header .body {
     display: flex;
     align-items: center;
@@ -192,15 +209,6 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.hero .content .title {
-    color: #171100;
-    font-family: var(--font-sen);
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-}
-
 .hero .content .desc {
     color: #5f5b53;
     font-size: 1.8rem;
@@ -272,4 +280,121 @@ a {
 
 .hero .content .desc2 strong + strong {
     margin-left: 28px;
+}
+/* courses */
+.courses {
+    padding: 200px 0;
+    background-color: var(--white-color);
+}
+
+.courses .row {
+    display: flex;
+    align-items: center;
+}
+
+.courses .row-heading {
+    justify-content: space-between;
+}
+
+.courses .row .desc {
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    margin-top: 16px;
+}
+
+.courses .control {
+    display: flex;
+    gap: 18px;
+}
+
+.courses .control .btn-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ffb900;
+    color: #ffb900;
+    background-color: transparent;
+}
+
+.courses .control .btn-control:hover,
+.courses .control .btn-control.active {
+    color: var(--white-color);
+    background-color: #ffb900;
+    cursor: pointer;
+}
+
+.courses .list-courses {
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.courses .list-courses .item {
+    flex: 1;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.courses .list-courses .img-courses {
+    width: 370px;
+    height: 278px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+.courses .list-courses .info {
+    padding: 18px 22px 22px;
+}
+
+.courses .row-title {
+    justify-content: space-between;
+}
+
+.courses .row-title .title {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.courses .row-title .star {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.courses .row-title .star span {
+    color: #fea31b;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.courses .list-courses .info .desc {
+    width: 326px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.courses .row-title.row-price {
+    margin-top: 8px;
+}
+
+.courses .btn-price {
+    font-size: 1.4rem;
+}
+
+.courses .active,
+.courses .btn-price:hover {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: #ffb900;
 }
