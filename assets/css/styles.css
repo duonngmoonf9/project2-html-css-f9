@@ -48,6 +48,17 @@ a {
     max-width: calc(100% - 48px);
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 .header {
     background: var(--primary-color);
     padding-top: 24px;
@@ -66,6 +77,7 @@ a {
 }
 
 .heading.lv1 {
+    --line-clamp: 3;
     font-weight: 700;
     font-size: 5.6rem;
     line-height: 1.17;
@@ -210,6 +222,7 @@ a {
 }
 
 .hero .content .desc {
+    --line-clamp: 3;
     color: #5f5b53;
     font-size: 1.8rem;
     font-weight: 400;
@@ -335,8 +348,18 @@ a {
 
 .courses .list-courses .item {
     flex: 1;
-    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
     border-radius: 12px;
+    border: 1px solid #e2dfda;
+}
+
+.courses .list-courses .item:first-child {
+    border-color: transparent;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.courses .list-courses .item:hover {
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+    border-color: transparent;
 }
 
 .courses .list-courses .img-courses {
@@ -344,6 +367,7 @@ a {
     height: 278px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
+    margin: 2;
 }
 
 .courses .list-courses .info {
@@ -362,6 +386,15 @@ a {
     line-height: 1.67;
 }
 
+.courses .row-title .title a {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    padding-right: 6px;
+}
+
 .courses .row-title .star {
     display: flex;
     align-items: center;
@@ -374,16 +407,16 @@ a {
     line-height: 1.75;
 }
 
+.courses .info .row-title ~ .row-title {
+    margin-top: 8px;
+}
+
 .courses .list-courses .info .desc {
     width: 326px;
     color: #5f5b53;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.86;
-}
-
-.courses .row-title.row-price {
-    margin-top: 8px;
 }
 
 .courses .btn-price {
@@ -397,4 +430,79 @@ a {
     font-size: 1.4rem;
     font-weight: 600;
     background: #ffb900;
+    border: none;
+}
+/* feedback */
+.feedback {
+    padding: 96px 0;
+    background: #2e2100;
+}
+
+.feedback .feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback .feedback-item .img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .feedback-item .title-name {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-sen);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+.feedback .feedback-item .desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.feedback .feedback-item .dots {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.feedback .feedback-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.feedback .feedback-item .active,
+.feedback .feedback-item .dot:hover {
+    background: #ffb900;
+    cursor: pointer;
+}
+
+.feedback-item .content {
+    width: 66%;
+}
+
+.feedback-item .content blockquote {
+    --line-clamp: 4;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.54;
 }
