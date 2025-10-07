@@ -592,3 +592,139 @@ a {
     border-radius: 20px;
     vertical-align: bottom;
 }
+
+/* blog */
+.blog {
+    padding: 96px 0;
+    background-color: var(--primary-color);
+}
+
+.blog .heading .title {
+    color: #130606;
+    text-align: center;
+    font-family: var(--font-sen);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.blog .heading .desc {
+    width: 448px;
+    margin: 16px auto;
+    color: #696262;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.blog .list-blog {
+    display: flex;
+    gap: 0 30px;
+    margin-top: 55px;
+}
+
+.blog .list-blog .item-blog {
+    background-color: var(--white-color);
+    flex: 1;
+    border-radius: 16px;
+}
+
+.blog .item-blog .banner-item {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.blog .item-blog .info {
+    padding: 20px;
+}
+
+.item-blog .info .date-create {
+    position: relative;
+    color: #5f5b53;
+    font-size: 14px;
+    line-height: 1.86; /* 185.714% */
+    padding-left: calc(6px + 4px);
+}
+
+.item-blog .info .date-create::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffb900;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+.item-blog .info .date-create::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #e2dfda;
+    left: 0;
+    bottom: -12px;
+}
+
+.item-blog .info .info-title {
+    margin: 25px 0 12px;
+    color: #171100;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+    width: 330px;
+}
+
+.item-blog .info .btn-blog {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.item-blog .info .btn-blog:hover,
+.item-blog .info .acitve {
+    background: #ffb900;
+    color: var(--white-color);
+}
+
+.item-blog.acitve {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.item-blog:hover {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.blog .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    gap: 6px;
+}
+
+.blog .dots .dot {
+}
+
+.blog .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.blog .dots .active,
+.blog .dots .dot:hover {
+    background: #ffb900;
+    cursor: pointer;
+}
